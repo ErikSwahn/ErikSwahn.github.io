@@ -1,4 +1,4 @@
-body{
+body {
   font: 15px/1.5 Arial, Helvetica,sans-serif;
   padding:0;
   margin:0;
@@ -11,14 +11,14 @@ body{
 
 
 /* Global */
-.container{
+.container {
   width:80%;
   margin:auto;
   overflow:hidden;
 }
 
 /* Header **/
-header{
+header {
   background-color:#1e1e1e;
   color:#ffffff;
   padding-top:30px;
@@ -29,50 +29,57 @@ header{
 }
 
 /* Showcase */
-#showcase{
+#showcase {
   min-height:500px;
-  background:url('../img/showcase.jpg') no-repeat 0 -350px;
+  background:url('../img/showcase.jpg') no-repeat center;
   text-align:center;
   color:#ffffff;
 }
 
-#showcase{
+#showcase {
    position:relative;
 }
 
-#showcase::before{
-content:'';
-position:absolute;
-top:0;
-left:0;
-right:0;
-bottom:0;
-background-color:rgba(0, 0, 0, 0.5);
-opacity:0;
-transition:250ms all ease;
+#showcase::before {
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-color:rgba(0, 0, 0, 0.5);
+  opacity:0;
+  transition:250ms all ease;
 }
 
-#showcase:hover:before{
+#showcase:hover:before {
   opacity:1;
 }
 
 /* Boxes */
-#boxes{
+#boxes {
   margin-top:50px;
 }
 
-#boxes .box{
-  float:left;
+#boxes .box {
+  float: left;
   text-align: center;
   width:30%;
   padding:10px;
+  margin:0 auto;
 }
 
-#boxes .box img{
+@media screen and (max-width:768px) {
+  body #boxes .box {
+    float:none;
+  }
+}
+
+#boxes .box img {
   width:90px;
 }
 
-footer{
+footer {
   padding:20px;
   margin-top:20px;
   color:#ffffff;
